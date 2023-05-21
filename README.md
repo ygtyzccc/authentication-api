@@ -28,7 +28,8 @@ This project using Spring Boot 3.0 and Spring Security 6.0 implementation of JWT
 ## How to run the application without Docker
 
 
-Create jwt_security database on PostgreSql on your local ip:5432, then run following commands
+Create jwt_security database on PostgreSql on your local ip:5432, check your postgre username and password,
+then run following commands
 
 1. Run `mvn clean verify -DskipTests` by going inside each folder to build the applications.
 2. After that run `mvn spring-boot:run` by going inside each folder to start the applications.
