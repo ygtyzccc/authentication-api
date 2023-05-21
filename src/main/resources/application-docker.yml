@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/jwt-postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: authentication-service
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+authorization-api:
+  secret-key: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
+
+springdoc:
+  swagger-ui:
+    path: /authentication-api-doc
+    tryItOutEnabled: true
+    operationsSorter: method
+    tagsSorter: alpha
+    filter: true
+    enabled: true
+
+  api-docs:
+    path: /authentication-documentation
+
+  packages-to-scan: com.yazici.authenticationservice.controller
+
+yazici:
+  openapi:
+    dev-url: http://api:8080/
